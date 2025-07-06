@@ -4,6 +4,7 @@ from transformers import XLMRobertaTokenizer
 from models.sentiment_model import MultilingualSentimentClassifier
 from utils.preprocess import load_and_clean
 from utils.download import download_file
+import os
 import torch.nn as nn
 import torch.optim as optim
 from tqdm import tqdm
@@ -11,6 +12,7 @@ from tqdm import tqdm
 # Download example CSV automatically
 csv_url = "https://raw.githubusercontent.com/bhanuprakash-vangala/public-datasets/main/example_posts.csv"
 csv_path = "data/example_posts.csv"
+os.makedirs(os.path.dirname(csv_path), exist_ok=True)
 download_file(csv_url, csv_path)
 
 

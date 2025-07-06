@@ -1,31 +1,25 @@
 # SocialSift: Crisis-aware Sentiment Analysis
 
 ## Overview
-Analyzes multilingual social media posts in real time during natural disasters. Identifies crisis-related sentiments to help aid organizations.
+SocialSift analyzes multilingual social media posts in real time during natural disasters. The model identifies whether a post is neutral/positive or if it indicates that help is needed.
 
 ## Features
-- Uses multilingual transformers (XLM-RoBERTa).
-- Automatically downloads example social media dataset.
-- Detects whether a post indicates help needed or is neutral/positive.
+- Utilizes XLM-RoBERTa for multilingual support.
+- Automatically downloads an example dataset on first run.
+- Simple training and inference scripts.
 
-## Setup
+## Usage
+Install dependencies and train the model:
+
 ```bash
 pip install -r requirements.txt
-Train
-bash
-Copy
-Edit
 python train.py
-Predict
-bash
-Copy
-Edit
+```
+
+After training, run predictions:
+
+```bash
 python predict.py
 ```
-Data
-No need to provide any CSV. The example dataset will be downloaded automatically.
 
-Finally, after generating all files, run:
-pip install -r requirements.txt
-python train.py
-python predict.py
+The example dataset is downloaded automatically; no additional data setup is required.
